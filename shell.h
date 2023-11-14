@@ -160,27 +160,31 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* toem_memory.c */
 int bfree(void **);
 
-/* toem_atoi.c */
-int interactive(info_t *);
-int is_delim(char, char *);
-int _isalpha(int);
-int _atoi(char *);
+/* toem_B_checks.c */
+int is_shell_interactive(info_t *info);
+int is_character_delimiter(char c, char *delim);
+int is_alpha_character(int c);
+int string_to_integer(char *s);
 
-/* toem_errors1.c */
-int _erratoi(char *);
-void print_error(info_t *, char *);
-int print_d(int, int);
-char *convert_number(long int, int, int);
-void remove_comments(char *);
+/* toem_error.c */
+int myErrAtoi(char *s);
+void printError(info_t *info, char *estr);
+int printDecimal(int input, int fd);
+char *convertNumber(long int num, int base, int flags);
+void removeComments(char *buf);
+
+
+/* toem_built_in.c */
+int myExitShell(info_t *info);
+int myChangeDirectory(info_t *info);
+int myHelp(info_t *info);
 
 /* toem_builtin.c */
-int _myexit(info_t *);
-int _mycd(info_t *);
-int _myhelp(info_t *);
-
-/* toem_builtin1.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int myShellHistory(info_t *info);
+int unsetAlias(info_t *info, char *str;)
+int setAlias(info_t *info, char *str);
+int printAlias(list_t *node);
+int myAlias(info_t *info);
 
 /*toem_getline.c */
 ssize_t get_input(info_t *);
