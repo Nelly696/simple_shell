@@ -1,19 +1,19 @@
 #include "shell.h"
 
 /**
- * _myexit - exits the shell
+ * _myExitShell - exits the shell
  * @info: to maintain a constant function prototype
  * Return: exits with a given exit status
  * (0) if info.argv[0] != "exit"
  */
-int _myexit(info_t *info)
+int _myExitShell(info_t *info)
 {
-	int exitcheck;
+	int exitCheck;
 
 	if (info->argv[1]) /* If there is an exit arguement */
 	{
-		exitcheck = _erratoi(info->argv[1]);
-		if (exitcheck == -1)
+		exitCheck = _erratoi(info->argv[1]);
+		if (exitCheck == -1)
 		{
 			info->status = 2;
 			print_error(info, "Illegal number: ");
@@ -29,11 +29,11 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current directory of the process
+ * _myChangeDirectory - changes the current directory of the process
  * @info: to maintain a constant function prototype
  * Return: Always 0
  */
-int _mycd(info_t *info)
+int _myChangeDirectory(info_t *info)
 {
 	char *s, *dir, buffer[1024];
 	int chdir_ret;
@@ -78,11 +78,11 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp - changes the current directory of the process
+ * _myHelp - changes the current directory of the process
  * @info: to maintain a constant function prototype
  * Return: Always 0
  */
-int _myhelp(info_t *info)
+int _myHelp(info_t *info)
 {
 	char **arg_array;
 
