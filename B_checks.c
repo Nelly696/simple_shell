@@ -6,7 +6,10 @@
  * Return: 1 if interactive mode,0 or false otherwise
  */
 int is_shell_interactive(info_t *info)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 553452582cebd6f6edbb7a772b695430592b76dc
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
