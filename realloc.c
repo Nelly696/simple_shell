@@ -32,14 +32,14 @@ void free_string_array(char **string_array)
 }
 
 /**
- * cus_realloc - reallocates a block of memory
+ * cu_realloc - reallocates a block of memory
  * @prev_ptr: pointer to previous malloc'ated block
  * @old_size: byte size of the previous block
  * @new_size: byte size of the new block
  *
  * Return: pointer to the old block if reallocation fails
  */
-void *cus_realloc(void *prev_ptr, unsigned int old_size, unsigned int new_size)
+void *cu_realloc(void *prev_ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *new_ptr;
 

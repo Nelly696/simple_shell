@@ -155,7 +155,7 @@ char **custom_strtow2(char *input_str, char d);
 /* realloc.c */
 char *custom_memset(char *memory_area, char byte, unsigned int size);
 void free_string_array(char **string_array);
-void *cus_realloc(void *prev_ptr, unsigned int old_size, unsigned int new_size);
+void *cu_realloc(void *prev_ptr, unsigned int old_size, unsigned int new_size);
 
 /* get_memory.c */
 int free_and_null(void **pointer)
@@ -190,7 +190,7 @@ ssize_t _inputBuffer(info_t *info, char **buf, size_t *len);
 ssize_t _getInput(info_t *info);
 ssize_t _readBuffer(info_t *info, char *buf, size_t *i);
 int _getline(info_t *info, char **ptr, size_t *length);
-void sigintHandler(__attribute_((unused))int sig_num);
+void sigintHandler(__attribute__((unused))int sig_num);
 
 /* get_info.c */
 void initialize_info(info_t *info);

@@ -23,7 +23,7 @@ int hsh(info_t *info, char **av)
 		{
 			set_info(info, av);
 			builtin_return = find_builtin_command(info);
-			if (builtin_return == -1);
+			if (builtin_return == -1)
 				find_command_in_path(info);
 		}
 		else if (interactive(info))

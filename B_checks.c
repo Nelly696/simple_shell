@@ -1,31 +1,19 @@
 #include "shell.h"
 
 /**
-<<<<<<< HEAD
- * interactive - returns true if shell is interactive mode.
- * @info: struct address
- * Return: 1 if interactive mode, 0 otherwise
- */
-int interactive(info_t *info)
-=======
  * is_shell_interactive - checks if the shell is in interactive mode.
  * @info: pointer to the info_t struct
  * Return: 1 if interactive mode,0 or false otherwise
  */
 int is_shell_interactive(info_t *info)
->>>>>>> af18b224abf5468d987d55eb6505692d0baf5b70
+
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
 
 /**
-<<<<<<< HEAD
- * is_delim - checks if character is a delimeter
- * @c: the char to check
-=======
  * is_character_delim - checks if character c is a delimeter
  * @c: the character to check
->>>>>>> af18b224abf5468d987d55eb6505692d0baf5b70
  * @delim: the delimeter string
  * Return: 1 if true, 0 if false
  */

@@ -6,7 +6,7 @@
  *
  * Return: Nothing
  */
-void _errorputs(char *str)
+void _errorPuts(char *str)
 {
 	int i = 0;
 
